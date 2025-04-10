@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Gradassi_Roll_The_Dice"
         tools:targetApi="31">
         <activity
+            android:name="com.example.gradassi_roll_the_dice_5ainf.ThirdActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.gradassi_roll_the_dice_5ainf.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.gradassi_roll_the_dice_5ainf.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

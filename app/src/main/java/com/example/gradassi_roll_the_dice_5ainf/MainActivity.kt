@@ -16,16 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-            val btnRoll : Button = findViewById(R.id.button_roll)
-            btnRoll.setOnClickListener(View.OnClickListener {
-                val toast= Toast.makeText(this,"Lancio del dado",Toast.LENGTH_LONG)
-                toast.show()
-                val  mioIntent: Intent =Intent(this, SecondActivity::class.java)
-                val mioRandom = (1..6).random()
-                mioIntent.putExtra("Messaggio","Numero estratto: $mioRandom")
-                startActivity(mioIntent)
+        val btnRoll: Button = findViewById(R.id.button_roll)
+        btnRoll.setOnClickListener(View.OnClickListener {
+            val toast = Toast.makeText(this, "Lancio del dado", Toast.LENGTH_LONG)
+            toast.show()
+            val mioIntent: Intent = Intent(this, SecondActivity::class.java)
+            val mioRandom = (1..6).random()
+            mioIntent.putExtra("Messaggio", "Numero estratto: $mioRandom")
+            startActivity(mioIntent)
+            mioIntent.putExtra("Random", mioRandom)
+            startActivity(mioIntent)
 
-            })
-        }
+        })
     }
+}
 
