@@ -27,6 +27,8 @@ class SecondActivity : AppCompatActivity() {
 
         var imageViewSecond = findViewById<ImageView>(R.id.imageViewActivitySecond)
         var random = intent.getIntExtra("Random", -1)
+        var random1= intent.getIntExtra("Random1", -1)
+        var random2=intent.getIntExtra("Random2",-1)
         var resource = when (random) {
             1 -> R.drawable.dice_face_1
             2 -> R.drawable.dice_face_2
@@ -46,8 +48,11 @@ class SecondActivity : AppCompatActivity() {
             toast1.show()
             val Intent1: Intent = Intent(this, ThirdActivity::class.java)
             Intent1.putExtra("Random", random)
+            Intent1.putExtra("Random1", random1)
+            Intent1.putExtra("Random2", random2)
+            Log.d("SECOND", "Dado Estratto")
             startActivity(Intent1)
-            })
+        })
 
-        }
-        }
+    }
+}
