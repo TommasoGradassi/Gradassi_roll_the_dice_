@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             toast.show()
             val mioIntent: Intent = Intent(this, SecondActivity::class.java)
             val mioRandom = (1..6).random()
+
             mioIntent.putExtra("Messaggio", "Numero estratto: $mioRandom")
             startActivity(mioIntent)
             mioIntent.putExtra("Random", mioRandom)

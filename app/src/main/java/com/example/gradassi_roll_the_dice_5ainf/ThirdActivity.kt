@@ -12,13 +12,12 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_third)
+        val random1 = (1..2).random()
+        val random2 = (1..2).random()
         var n = intent.getIntExtra("Random", -1)
-        var n1 = intent.getIntExtra("Random1", -1)
-        var n2 = intent.getIntExtra("Random2", -1)
-        var somma = intent.getIntExtra("SOMMA", 0)
-        somma=n1+n2
+        var somma=random1+random2
         Log.d("DEBUG", "Numero uscito: $n")
-        Log.d("DEBUG", "Numeri sommati: $n1 + $n2 = $somma")
+        Log.d("DEBUG", "Numeri sommati: $random1 + $random2 = $somma")
         var Stringa1=""
         var risultato = if (n > somma) {
 
